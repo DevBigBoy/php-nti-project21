@@ -49,8 +49,7 @@ include_once "layouts/navbar.php";
                         <a class="action-cart" href="#" title="Add To Cart">
                             <i class="ion-ios-shuffle-strong"></i>
                         </a>
-                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                            title="Quick View">
+                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                             <i class="ion-ios-search-strong"></i>
                         </a>
                     </div>
@@ -84,8 +83,7 @@ include_once "layouts/navbar.php";
                         <a class="action-cart" href="#" title="Add To Cart">
                             <i class="ion-ios-shuffle-strong"></i>
                         </a>
-                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                            title="Quick View">
+                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                             <i class="ion-ios-search-strong"></i>
                         </a>
                     </div>
@@ -120,8 +118,7 @@ include_once "layouts/navbar.php";
                         <a class="action-cart" href="#" title="Add To Cart">
                             <i class="ion-ios-shuffle-strong"></i>
                         </a>
-                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                            title="Quick View">
+                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                             <i class="ion-ios-search-strong"></i>
                         </a>
                     </div>
@@ -155,8 +152,7 @@ include_once "layouts/navbar.php";
                         <a class="action-cart" href="#" title="Add To Cart">
                             <i class="ion-ios-shuffle-strong"></i>
                         </a>
-                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                            title="Quick View">
+                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                             <i class="ion-ios-search-strong"></i>
                         </a>
                     </div>
@@ -191,8 +187,7 @@ include_once "layouts/navbar.php";
                         <a class="action-cart" href="#" title="Add To Cart">
                             <i class="ion-ios-shuffle-strong"></i>
                         </a>
-                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                            title="Quick View">
+                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                             <i class="ion-ios-search-strong"></i>
                         </a>
                     </div>
@@ -275,8 +270,7 @@ include_once "layouts/navbar.php";
                                     <a class="action-cart" href="#" title="Add To Cart">
                                         <i class="ion-ios-shuffle-strong"></i>
                                     </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                                        title="Quick View">
+                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                                         <i class="ion-ios-search-strong"></i>
                                     </a>
                                 </div>
@@ -311,8 +305,7 @@ include_once "layouts/navbar.php";
                                     <a class="action-cart" href="#" title="Add To Cart">
                                         <i class="ion-ios-shuffle-strong"></i>
                                     </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                                        title="Quick View">
+                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                                         <i class="ion-ios-search-strong"></i>
                                     </a>
                                 </div>
@@ -349,8 +342,7 @@ include_once "layouts/navbar.php";
                                     <a class="action-cart" href="#" title="Add To Cart">
                                         <i class="ion-ios-shuffle-strong"></i>
                                     </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                                        title="Quick View">
+                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                                         <i class="ion-ios-search-strong"></i>
                                     </a>
                                 </div>
@@ -384,8 +376,7 @@ include_once "layouts/navbar.php";
                                     <a class="action-cart" href="#" title="Add To Cart">
                                         <i class="ion-ios-shuffle-strong"></i>
                                     </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                                        title="Quick View">
+                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                                         <i class="ion-ios-search-strong"></i>
                                     </a>
                                 </div>
@@ -421,8 +412,7 @@ include_once "layouts/navbar.php";
                                     <a class="action-cart" href="#" title="Add To Cart">
                                         <i class="ion-ios-shuffle-strong"></i>
                                     </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                                        title="Quick View">
+                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                                         <i class="ion-ios-search-strong"></i>
                                     </a>
                                 </div>
@@ -457,8 +447,7 @@ include_once "layouts/navbar.php";
                                     <a class="action-cart" href="#" title="Add To Cart">
                                         <i class="ion-ios-shuffle-strong"></i>
                                     </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                                        title="Quick View">
+                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                                         <i class="ion-ios-search-strong"></i>
                                     </a>
                                 </div>
@@ -495,8 +484,7 @@ include_once "layouts/navbar.php";
                                     <a class="action-cart" href="#" title="Add To Cart">
                                         <i class="ion-ios-shuffle-strong"></i>
                                     </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                                        title="Quick View">
+                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                                         <i class="ion-ios-search-strong"></i>
                                     </a>
                                 </div>
@@ -530,8 +518,7 @@ include_once "layouts/navbar.php";
                                     <a class="action-cart" href="#" title="Add To Cart">
                                         <i class="ion-ios-shuffle-strong"></i>
                                     </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                                        title="Quick View">
+                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                                         <i class="ion-ios-search-strong"></i>
                                     </a>
                                 </div>
@@ -568,8 +555,7 @@ include_once "layouts/navbar.php";
                                     <a class="action-cart" href="#" title="Add To Cart">
                                         <i class="ion-ios-shuffle-strong"></i>
                                     </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                                        title="Quick View">
+                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                                         <i class="ion-ios-search-strong"></i>
                                     </a>
                                 </div>
@@ -604,8 +590,7 @@ include_once "layouts/navbar.php";
                                     <a class="action-cart" href="#" title="Add To Cart">
                                         <i class="ion-ios-shuffle-strong"></i>
                                     </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal"
-                                        title="Quick View">
+                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
                                         <i class="ion-ios-search-strong"></i>
                                     </a>
                                 </div>
@@ -744,19 +729,13 @@ include_once "layouts/navbar.php";
             <div class="col-lg-6 col-md-10 col-md-auto">
                 <div class="footer-newsletter">
                     <div id="mc_embed_signup" class="subscribe-form">
-                        <form
-                            action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
-                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                            class="validate" target="_blank" novalidate>
+                        <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                             <div id="mc_embed_signup_scroll" class="mc-form">
-                                <input type="email" value="" name="EMAIL" class="email"
-                                    placeholder="Your Email Address*" required>
+                                <input type="email" value="" name="EMAIL" class="email" placeholder="Your Email Address*" required>
                                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                <div class="mc-news" aria-hidden="true"><input type="text"
-                                        name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
+                                <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
                                 <div class="submit-button">
-                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                                        class="button">
+                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
                                 </div>
                             </div>
                         </form>

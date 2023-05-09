@@ -112,14 +112,12 @@
                             </nav>
                         </div>
                         <div class="header-currency">
-                            <span class="digit">USD <i class="ti-angle-down"></i></span>
+                            <span class="digit">Welcome <i class="ti-angle-down"></i></span>
                             <div class="dollar-submenu">
                                 <ul>
-                                    <li><a href="#">$ USD</a></li>
-                                    <li><a href="#">€ EUR</a></li>
-                                    <li><a href="#">£ GBP</a></li>
-                                    <li><a href="#">₹ INR</a></li>
-                                    <li><a href="#">¥ JPY</a></li>
+                                    <li><a href="login.php">Login</a></li>
+                                    <li><a href="register.php">Register</a></li>
+
                                 </ul>
                             </div>
                         </div>
