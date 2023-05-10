@@ -3,7 +3,81 @@ $title = "Register";
 include_once "layouts/header.php";
 include_once "layouts/navbar.php";
 include_once "layouts/breadcrumb.php";
+include_once "app/requests/Validation.php";
 
+if ($_POST) {
+    // print_r($_POST);
+    // die;
+    # validation rules
+
+    $success = [];
+    # first_name :: required, String
+    $checkFirstName = new Validation('First name', $_POST['first_name']);
+    $checkFirstNameResult = $checkFirstName->required();
+
+
+    # last_name :: required, string
+    $checkLastName = new Validation('Last name', $_POST['last_name']);
+    $checkLastNameResult = $checkLastName->required();
+
+    # gender :: required,['f','m']
+
+    # email :: required, regular expression, unique
+    $checkEmail = new Validation('email', $_POST['email']);
+    $emailRequired = $checkEmail->required();
+    if (empty($emailRequired)) {
+        $emailRegex = $checkEmail->regex("/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/");
+        if (empty($emailRegex)) {
+            $emailUnique = $checkEmail->unique('users');
+            if (empty($emailUnique)) {
+                $success['email'] = 'email';
+            }
+        }
+    }
+
+    # phone :: required, regex(pattern), unique
+    $checkPhone = new Validation('phone', $_POST['phone']);
+    $phoneRequired = $checkPhone->required();
+    if (empty($phoneRequired)) {
+        $phoneRegex = $checkPhone->regex("/^01[0-2,5,9]{1}[0-9]{8}$/");
+        if (empty($phoneRegex)) {
+            $phoneUnique = $checkPhone->unique('users');
+            if (empty($phoneUnique)) {
+                $success['phone'] = 'phone';
+            }
+        }
+    }
+
+    # password :: required, regex(pattern), = password_confirmation
+    $checkpass = new Validation('password', $_POST['password']);
+    $passRequired = $checkpass->required();
+    if (empty($passRequired)) {
+        $passRegex = $checkpass->regex("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/");
+        if (empty($passRegex)) {
+            $checkC_pass = new Validation('confirmed password', $_POST['password_confirmation']);
+            $c_passRequired = $checkC_pass->required();
+            if (empty($c_passRequired)) {
+                $c_passMatches = $checkpass->confirmed($_POST['password_confirmation']);
+                if (empty($c_passMatches)) {
+                    $success['password'] = 'password';
+                }
+            }
+        }
+    }
+
+
+
+
+    # Insert Data into database
+
+    if (isset($success['email']) && isset($success['phone']) && isset($success['password'])) {
+
+        # hash for password
+        # generate code
+        # insert User
+        echo 'done';
+    }
+}
 ?>
 
 <div class="login-register-area ptb-100">
@@ -20,18 +94,37 @@ include_once "layouts/breadcrumb.php";
                         <div id="lg2" class="tab-pane active">
                             <div class="login-form-container">
                                 <div class="login-register-form">
-                                    <form action="" method="post">
-                                        <input type="text" name="first_name" placeholder="First Name" />
-                                        <input type="text" name="last_name" placeholder="Last Name" />
-                                        <input name="email" placeholder="Email" type="email" />
-                                        <input name="phone" placeholder="phone" type="text" />
+                                    <form method="post">
+                                        <?= empty($checkFirstNameResult) ? '' : "<div class='alert alert-danger'>$checkFirstNameResult </div>"; ?>
+                                        <input type="text" name="first_name" placeholder="First Name" value="<?= (isset($_POST['first_name'])) ? $_POST['first_name'] : ''; ?>" />
+
+                                        <?= empty($checkLastNameResult) ? '' : "<div class='alert alert-danger'>$checkLastNameResult </div>"; ?>
+                                        <input type="text" name="last_name" placeholder="Last Name" value="<?= (isset($_POST['last_name'])) ? $_POST['last_name'] : ''; ?>" />
+
+                                        <?= empty($emailRequired) ? '' : "<div class='alert alert-danger'>$emailRequired </div>"; ?>
+                                        <?= empty($emailRegex) ? '' : "<div class='alert alert-danger'>$emailRegex </div>"; ?>
+                                        <?= empty($emailUnique) ? '' : "<div class='alert alert-danger'>$emailUnique </div>"; ?>
+                                        <input name="email" placeholder="Email" type="email" value="<?= (isset($_POST['email'])) ? $_POST['email'] : ''; ?>" />
+
+
+                                        <?= empty($phoneRequired) ? '' : "<div class='alert alert-danger'>$phoneRequired </div>"; ?>
+                                        <?= empty($phoneRegex) ? '' : "<div class='alert alert-danger'>$phoneRegex </div>"; ?>
+                                        <?= empty($phoneUnique) ? '' : "<div class='alert alert-danger'>$phoneUnique </div>"; ?>
+                                        <input name="phone" placeholder="phone" type="text" value="<?= (isset($_POST['phone'])) ? $_POST['phone'] : ''; ?>" />
+
+                                        <?= empty($passRequired) ? '' : "<div class='alert alert-danger'>$passRequired </div>"; ?>
+                                        <?= empty($passRegex) ? '' : "<div class='alert alert-danger'>Minimum eight and maximum 15 characters, at least one uppercase letter, one lowercase letter, one number and one special character</div>"; ?>
                                         <input type="password" name="password" placeholder="Password" />
-                                        <input type="password" name="password_confirmation"
-                                            placeholder="Confirm Password" />
+
+                                        <?= empty($c_passRequired) ? '' : "<div class='alert alert-danger'>$c_passRequired </div>"; ?>
+                                        <?= empty($c_passMatches) ? '' : "<div class='alert alert-danger'>$c_passMatches </div>"; ?>
+                                        <input type="password" name="password_confirmation" placeholder="Confirm Password" />
+
                                         <select name="gender" id="" class="form-control mb-2">
-                                            <option value="m">male</option>
-                                            <option value="f">female</option>
+                                            <option <?= (isset($_POST['gender']) && $_POST['gender'] == 'm') ? 'selected' : ''; ?> value="m">male</option>
+                                            <option <?= (isset($_POST['gender']) && $_POST['gender'] == 'f') ? 'selected' : ''; ?> value="f">female</option>
                                         </select>
+
                                         <div class="button-box mt-5">
                                             <button type="submit"><span>Register</span></button>
                                         </div>
