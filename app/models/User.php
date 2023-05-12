@@ -134,7 +134,7 @@ class User extends config implements operations
      */
     public function setPassword($password)
     {
-        $this->password = $password;
+        $this->password = sha1($password);
 
         return $this;
     }
@@ -283,6 +283,9 @@ class User extends config implements operations
     # Insert
     public function create()
     {
+        $query = "INSERT INTO `users` (first_name,last_name,email,phone,password,gender,code) VALUES('$this->first_name','$this->last_name','$this->email','$this->phone','$this->password','$this->gender',$this->code)";
+
+        return $this->runDML($query);
     }
 
     # Select

@@ -4,6 +4,8 @@ include_once "layouts/header.php";
 include_once "layouts/navbar.php";
 include_once "layouts/breadcrumb.php";
 include_once "app/requests/Validation.php";
+include_once "app/models/User.php";
+include_once "app/services/mail.php";
 
 if ($_POST) {
     // print_r($_POST);
@@ -75,7 +77,37 @@ if ($_POST) {
         # hash for password
         # generate code
         # insert User
-        echo 'done';
+        $userObject = new User;
+        $userObject->setFirst_name($_POST['first_name']);
+        $userObject->setLast_name($_POST['last_name']);
+        $userObject->setEmail($_POST['email']);
+        $userObject->setPhone($_POST['phone']);
+        $userObject->setGender($_POST['gender']);
+        $userObject->setPassword($_POST['password']);
+        $code = rand(10000, 99999);
+        $userObject->setCode($code);
+        $result = $userObject->create();
+        if ($result) {
+            # send mail with code
+            // mail to => $_POST['email'];
+            // mail from => configration
+            // mail subject => verification code
+            // mail body => hello name, your verification code is 00000, thanks
+            $subject = 'verification code';
+            $body = "Hello {$_POST['first_name']} {$_POST['last_name']},<br> Your verification code is $code <br> thank you for joining us";
+            $mail = new mail($_POST['email'], $subject, $body);
+            $mailresult =  $mail->send();
+            if ($mailresult) {
+                // echo 'Check Your mail!';
+                # header to check code page
+                $_SESSION['user-email'] = $_POST['email'];
+                header('location: check-code.php');
+            } else {
+                $error = "<div class='alert alert-danger'>Try Again Later!</div>";
+            }
+        } else {
+            $error = "<div class='alert alert-danger'>Try Again Later!</div>";
+        }
     }
 }
 ?>
@@ -94,6 +126,7 @@ if ($_POST) {
                         <div id="lg2" class="tab-pane active">
                             <div class="login-form-container">
                                 <div class="login-register-form">
+                                    <?php (isset($error)) ? $error : ''; ?>
                                     <form method="post">
                                         <?= empty($checkFirstNameResult) ? '' : "<div class='alert alert-danger'>$checkFirstNameResult </div>"; ?>
                                         <input type="text" name="first_name" placeholder="First Name" value="<?= (isset($_POST['first_name'])) ? $_POST['first_name'] : ''; ?>" />
