@@ -129,21 +129,25 @@ if ($_POST) {
                                     <?php (isset($error)) ? $error : ''; ?>
                                     <form method="post">
                                         <?= empty($checkFirstNameResult) ? '' : "<div class='alert alert-danger'>$checkFirstNameResult </div>"; ?>
-                                        <input type="text" name="first_name" placeholder="First Name" value="<?= (isset($_POST['first_name'])) ? $_POST['first_name'] : ''; ?>" />
+                                        <input type="text" name="first_name" placeholder="First Name"
+                                            value="<?= (isset($_POST['first_name'])) ? $_POST['first_name'] : ''; ?>" />
 
                                         <?= empty($checkLastNameResult) ? '' : "<div class='alert alert-danger'>$checkLastNameResult </div>"; ?>
-                                        <input type="text" name="last_name" placeholder="Last Name" value="<?= (isset($_POST['last_name'])) ? $_POST['last_name'] : ''; ?>" />
+                                        <input type="text" name="last_name" placeholder="Last Name"
+                                            value="<?= (isset($_POST['last_name'])) ? $_POST['last_name'] : ''; ?>" />
 
                                         <?= empty($emailRequired) ? '' : "<div class='alert alert-danger'>$emailRequired </div>"; ?>
                                         <?= empty($emailRegex) ? '' : "<div class='alert alert-danger'>$emailRegex </div>"; ?>
                                         <?= empty($emailUnique) ? '' : "<div class='alert alert-danger'>$emailUnique </div>"; ?>
-                                        <input name="email" placeholder="Email" type="email" value="<?= (isset($_POST['email'])) ? $_POST['email'] : ''; ?>" />
+                                        <input name="email" placeholder="Email" type="email"
+                                            value="<?= (isset($_POST['email'])) ? $_POST['email'] : ''; ?>" />
 
 
                                         <?= empty($phoneRequired) ? '' : "<div class='alert alert-danger'>$phoneRequired </div>"; ?>
                                         <?= empty($phoneRegex) ? '' : "<div class='alert alert-danger'>$phoneRegex </div>"; ?>
                                         <?= empty($phoneUnique) ? '' : "<div class='alert alert-danger'>$phoneUnique </div>"; ?>
-                                        <input name="phone" placeholder="phone" type="text" value="<?= (isset($_POST['phone'])) ? $_POST['phone'] : ''; ?>" />
+                                        <input name="phone" placeholder="phone" type="text"
+                                            value="<?= (isset($_POST['phone'])) ? $_POST['phone'] : ''; ?>" />
 
                                         <?= empty($passRequired) ? '' : "<div class='alert alert-danger'>$passRequired </div>"; ?>
                                         <?= empty($passRegex) ? '' : "<div class='alert alert-danger'>Minimum eight and maximum 15 characters, at least one uppercase letter, one lowercase letter, one number and one special character</div>"; ?>
@@ -151,11 +155,16 @@ if ($_POST) {
 
                                         <?= empty($c_passRequired) ? '' : "<div class='alert alert-danger'>$c_passRequired </div>"; ?>
                                         <?= empty($c_passMatches) ? '' : "<div class='alert alert-danger'>$c_passMatches </div>"; ?>
-                                        <input type="password" name="password_confirmation" placeholder="Confirm Password" />
+                                        <input type="password" name="password_confirmation"
+                                            placeholder="Confirm Password" />
 
                                         <select name="gender" id="" class="form-control mb-2">
-                                            <option <?= (isset($_POST['gender']) && $_POST['gender'] == 'm') ? 'selected' : ''; ?> value="m">male</option>
-                                            <option <?= (isset($_POST['gender']) && $_POST['gender'] == 'f') ? 'selected' : ''; ?> value="f">female</option>
+                                            <option
+                                                <?= (isset($_POST['gender']) && $_POST['gender'] == 'm') ? 'selected' : ''; ?>
+                                                value="m">male</option>
+                                            <option
+                                                <?= (isset($_POST['gender']) && $_POST['gender'] == 'f') ? 'selected' : ''; ?>
+                                                value="f">female</option>
                                         </select>
 
                                         <div class="button-box mt-5">
