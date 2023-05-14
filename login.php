@@ -15,22 +15,38 @@ include_once "layouts/breadcrumb.php";
                         <a class="active" data-toggle="tab" href="#lg1">
                             <h4>login</h4>
                         </a>
-
                     </div>
                     <div class="tab-content">
                         <div id="lg1" class="tab-pane active">
                             <div class="login-form-container">
                                 <div class="login-register-form">
-                                    <form action="#" method="post">
-                                        <input type="text" name="user-name" placeholder="Username" />
-                                        <input type="password" name="user-password" placeholder="Password" />
+                                    <form action="app/post/login.php" method="post">
+                                        <input type="email" name="email" placeholder="Email">
+                                        <?php
+                                        if (!empty($_SESSION['errors']['email'])) {
+                                            foreach ($_SESSION['errors']['email'] as $key => $value) {
+                                                echo "<div class='alert alert-danger'>$value</div>";
+                                            }
+                                        }
+
+                                        ?>
+                                        <input type="password" name="password" placeholder="password" />
+                                        <?php
+                                        if (!empty($_SESSION['errors']['password'])) {
+                                            foreach ($_SESSION['errors']['password'] as $key => $value) {
+                                                echo "<div class='alert alert-danger'>$value</div>";
+                                            }
+                                        }
+
+                                        ?>
+
                                         <div class="button-box">
                                             <div class="login-toggle-btn">
                                                 <input type="checkbox" />
                                                 <label>Remember me</label>
                                                 <a href="#">Forgot Password?</a>
                                             </div>
-                                            <button type="submit"><span>Login</span></button>
+                                            <button type="submit" name="login"><span>Login</span></button>
                                         </div>
                                     </form>
                                 </div>
@@ -43,6 +59,7 @@ include_once "layouts/breadcrumb.php";
         </div>
     </div>
 </div>
+
 <?php
 include_once "layouts/footer.php";
 include_once "layouts/footer-scripts.php";

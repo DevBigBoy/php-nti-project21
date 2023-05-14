@@ -28,6 +28,7 @@ if ($_POST) {
             $updateResult = $userObject->makeUserVerified();
             if ($updateResult) {
                 // TODO: Header To login
+                unset($_SESSION['user-email']);
                 header('location: login.php');
             } else {
                 $errors['something'] = "<div class='alert alert-danger'>try again later</div>";
