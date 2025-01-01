@@ -80,8 +80,7 @@
                                                     <li><a href="blog-no-sidebar.php">no sidebar</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="#">Post Types <span><i class="ion-ios-arrow-right"></i></span>
-                                                </a>
+                                            <li><a href="#">Post Types <span><i class="ion-ios-arrow-right"></i></span> </a>
                                                 <ul class="lavel-menu">
                                                     <li><a href="blog-details-standerd.php">Standard post</a></li>
                                                     <li><a href="blog-details-audio.php">audio post</a></li>
@@ -112,34 +111,16 @@
                             </nav>
                         </div>
                         <div class="header-currency">
-                            <?php
-                            if (isset($_SESSION['user'])) {
-                            ?>
-                                <span class="digit">
-                                    <?= $_SESSION['user']->first_name . ' ' . $_SESSION['user']->last_name; ?> <i class="ti-angle-down"></i></span>
-                                <div class="dollar-submenu">
-                                    <ul>
-                                        <li><a href="profile.php">Profile</a></li>
-                                        <li><a href="../app/post/logout.php">Logout</a></li>
-
-                                    </ul>
-                                </div>
-
-                            <?php
-                            } else {
-                            ?>
-                                <span class="digit">Welcome <i class="ti-angle-down"></i></span>
-                                <div class="dollar-submenu">
-                                    <ul>
-                                        <li><a href="login.php">Login</a></li>
-                                        <li><a href="register.php">Register</a></li>
-
-                                    </ul>
-                                </div>
-                            <?php
-                            }
-                            ?>
-
+                            <span class="digit">USD <i class="ti-angle-down"></i></span>
+                            <div class="dollar-submenu">
+                                <ul>
+                                    <li><a href="#">$ USD</a></li>
+                                    <li><a href="#">€ EUR</a></li>
+                                    <li><a href="#">£ GBP</a></li>
+                                    <li><a href="#">₹ INR</a></li>
+                                    <li><a href="#">¥ JPY</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="header-cart">
                             <a href="#">

@@ -104,8 +104,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">x</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -129,14 +128,10 @@
                         <!-- Thumbnail Image End -->
                         <div class="product-thumbnail">
                             <div class="thumb-menu owl-carousel nav nav-style" role="tablist">
-                                <a class="active" data-toggle="tab" href="#pro-1"><img
-                                        src="assets/img/product-details/product-detalis-s1.jpg" alt=""></a>
-                                <a data-toggle="tab" href="#pro-2"><img
-                                        src="assets/img/product-details/product-detalis-s2.jpg" alt=""></a>
-                                <a data-toggle="tab" href="#pro-3"><img
-                                        src="assets/img/product-details/product-detalis-s3.jpg" alt=""></a>
-                                <a data-toggle="tab" href="#pro-4"><img
-                                        src="assets/img/product-details/product-detalis-s4.jpg" alt=""></a>
+                                <a class="active" data-toggle="tab" href="#pro-1"><img src="assets/img/product-details/product-detalis-s1.jpg" alt=""></a>
+                                <a data-toggle="tab" href="#pro-2"><img src="assets/img/product-details/product-detalis-s2.jpg" alt=""></a>
+                                <a data-toggle="tab" href="#pro-3"><img src="assets/img/product-details/product-detalis-s3.jpg" alt=""></a>
+                                <a data-toggle="tab" href="#pro-4"><img src="assets/img/product-details/product-detalis-s4.jpg" alt=""></a>
                             </div>
                         </div>
                         <!-- Thumbnail image end -->
@@ -148,8 +143,7 @@
                                 <span class="product-price-old">£162.00 </span>
                                 <span>£120.00</span>
                             </div>
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                                egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
                             <div class="quick-view-select">
                                 <div class="select-option-part">
                                     <label>Size*</label>
